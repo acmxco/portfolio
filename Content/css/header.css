@@ -373,8 +373,8 @@
         }
         
         @media(min-width:800px) {
-            #main-collapse>div.hero-full-wrapper>div {
-                margin-top: 7vh!important;
+            #main-collapse>div.hero-full-wrapper>.spacing {
+                margin-top: 5vh;
                 margin-bottom: 0!important;
             }
         }
@@ -383,10 +383,6 @@
             #main-collapse>div.hero-full-wrapper>div {
                 margin-top: 0;
             }
-        }
-        
-        #main-collapse>div.hero-full-wrapper>div {
-            /* padding-bottom: 5em; */
         }
         /* LIGHTBOX */
         
@@ -707,7 +703,7 @@
             .grid-item,
             .grid-sizer {
                 width: 43%!important;
-                padding: 7.5em!important;
+                padding: 6em!important;
                 margin-left: 30px;
             }
         }
@@ -1035,8 +1031,6 @@
             line-height: 1.6em;
         }
         
-        .about-wrapper {}
-        
         @media(min-width:1248px) and (orientation:portrait) {
             .profileimg {
                 max-width: 80%;
@@ -1077,3 +1071,8 @@
             }
         }
         /* Animation */
+        
+        .animate__animated .animate-fadeIn {
+            --animate-duration: 20s;
+            /* don't forget to set a duration! */
+        }
