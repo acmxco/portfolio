@@ -397,6 +397,10 @@ main {
     overflow: hidden;
 }
 
+.grid-wrap--hidden>.frame {
+    visibility: hidden;
+}
+
 .grid {
     margin: 0 auto;
     position: relative;
@@ -1342,7 +1346,7 @@ h1 {
     line-height: 1.1
 }
 
-@media only screen and (max-width:768px) and (orientation: portrait) {
+@media (max-width:768px) and (orientation: portrait) {
     .-full-height-margin,
     .detail .full-height-wrapper {
         height: auto;
@@ -1350,26 +1354,26 @@ h1 {
     }
 }
 
-@media only screen and (max-width:768px) {
+@media (max-width:768px) {
     .-full-height-margin,
     .detail .full-height-wrapper {
         height: auto;
     }
 }
 
-@media only screen and (min-width:1281px) {
+@media (min-width:1281px) {
     .is-hoverable .-lrg {
         font-size: 14vw
     }
 }
 
-@media only screen and (min-width:1366px) {
+@media (min-width:1366px) {
     .is-hoverable .-lrg {
         font-size: 185px
     }
 }
 
-@media only screen and (min-width:1920px) {
+@media (min-width:1920px) {
     .is-hoverable .-lrg {
         font-size: 280px;
         letter-spacing: 8px
@@ -1567,27 +1571,27 @@ html.ios .detail .full-height-wrapper {
     padding: 15vh 0 25vh;
 }
 
-@media only screen and (orientation: landscape) {
+@media (orientation: landscape) {
     .menu-container.-full-height-margin {
         height: 100%;
     }
 }
 
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media (min-width: 1000px) and (orientation: landscape) {
     .-full-height-margin,
     .detail .full-height-wrapper {
         padding: 16.5vh 0;
     }
 }
 
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
     .-full-height-margin,
     .detail .full-height-wrapper {
         padding: 13.5vh 0;
     }
 }
 
-@media only screen and (orientation: landscape) {
+@media (orientation: landscape) {
     .-full-height-margin,
     .detail .full-height-wrapper {
         height: auto;
@@ -1595,7 +1599,7 @@ html.ios .detail .full-height-wrapper {
     }
 }
 
-@media only screen and (min-width:300px) and (max-width:411px) {
+@media (min-width:300px) and (max-width:411px) {
     .t1 .a-line {
         /* margin-left: -4%; */
         font-size: 0.8em;
@@ -1608,13 +1612,13 @@ html.ios .detail .full-height-wrapper {
         } */
 }
 
-@media only screen and (min-width:371px) and (max-width:411px) {
+@media (min-width:371px) and (max-width:411px) {
     .imgp .hover-title {
         margin-top: 25rem;
     }
 }
 
-@media only screen and (min-width:411px) and (max-width:500px) {
+@media (min-width:411px) and (max-width:500px) {
     .t1 .a-line {
         margin-left: 0;
         font-size: 0.8em;
@@ -1630,7 +1634,7 @@ html.ios .detail .full-height-wrapper {
         } */
 }
 
-@media only screen and (min-width:500px) and (max-width:760px) {
+@media (min-width:500px) and (max-width:760px) {
     .-full-height-margin:last-child {
         padding: 0 0 20vh
     }
@@ -1640,7 +1644,7 @@ html.ios .detail .full-height-wrapper {
     }
 }
 
-@media only screen and (min-width:200px) and (orientation:landscape) {
+@media (min-width:200px) and (orientation:landscape) {
     .-top {
         top: 7vh
     }
@@ -1655,7 +1659,7 @@ html.ios .detail .full-height-wrapper {
     }
 }
 
-@media only screen and (min-width:768px) {
+@media (min-width:768px) {
     .-border {
         border-width: 11px
     }
@@ -1853,7 +1857,7 @@ html.ios .detail .full-height-wrapper {
     }
 }
 
-@media only screen and (min-width:1000px) and (orientation:landscape) {
+@media (min-width:1000px) and (orientation:landscape) {
     .-lrg {
         font-size: 6vw
     }
@@ -1872,7 +1876,7 @@ html.ios .detail .full-height-wrapper {
     }
 }
 
-@media only screen and (min-width:1000px) and (orientation:portrait) {
+@media (min-width:1000px) and (orientation:portrait) {
     .-bottom-left {
         bottom: 6vh;
         left: 6vh
@@ -1909,7 +1913,7 @@ html.ios .detail .full-height-wrapper {
     }
 }
 
-@media only screen and (min-width:1280px) {
+@media (min-width:1280px) {
     .about-wrapper {
         max-width: 740px
     }
@@ -1919,7 +1923,7 @@ html.ios .detail .full-height-wrapper {
     }
 }
 
-@media only screen and (min-width:1281px) {
+@media (min-width:1281px) {
     .-top-left {
         left: 9.5%;
     }
@@ -1975,7 +1979,7 @@ html.ios .detail .full-height-wrapper {
     }
 }
 
-@media only screen and (min-width:1366px) {
+@media (min-width:1366px) {
     .-bottom {
         bottom: 8.5vh
     }
@@ -2022,7 +2026,7 @@ html.ios .detail .full-height-wrapper {
     }
 }
 
-@media only screen and (min-width:1400px) {
+@media (min-width:1400px) {
     .fixed-left {
         left: 7vh
     }
@@ -2031,7 +2035,7 @@ html.ios .detail .full-height-wrapper {
     }
 }
 
-@media only screen and (min-width:1600px) {
+@media (min-width:1600px) {
     .about-wrapper {
         max-width: 851px
     }
@@ -2048,7 +2052,7 @@ html.ios .detail .full-height-wrapper {
     }
 }
 
-@media only screen and (min-width:1920px) {
+@media (min-width:1920px) {
     .-border {
         border-width: 24px
     }

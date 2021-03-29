@@ -6,16 +6,10 @@ body {
     color: #fff;
 }
 
-
-/*.menu-open,
+.menu-open,
 .menu-close {
-	position: absolute;
-	top: 0;
-	right: 0;
-	padding: 40px;
-	font-size: 20px;
-	cursor: pointer;
-}*/
+    z-index: 5;
+}
 
 .socials {
     position: absolute;
