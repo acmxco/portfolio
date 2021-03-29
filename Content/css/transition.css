@@ -1,0 +1,22 @@
+	.fade-in {
+		animation: fadeIn ease 3s;
+		-webkit-animation: fadeIn ease 3s;
+		-moz-animation: fadeIn ease 3s;
+		-o-animation: fadeIn ease 3s;
+		-ms-animation: fadeIn ease 3s;
+	}
+
+	.fade-out {
+		animation: fadeOut ease 3s;
+		-webkit-animation: fadeOut ease 3s;
+		-moz-animation: fadeOut ease 3s;
+		-o-animation: fadeOut ease 3s;
+		-ms-animation: fadeOut ease 3s;
+	}
+	.pulse {
+		animation: pulse ease 3s;
+		-webkit-animation: pulse ease 3s;
+		-moz-animation: pulse ease 3s;
+		-o-animation: pulse ease 3s;
+		-ms-animation: pulse ease 3s;
+	}
