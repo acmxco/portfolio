@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
@@ -46,72 +47,70 @@
         overflow: hidden;
     }
 </style>
-<header>
-    <div id="wrapper">
-        <div class="navbar navbar-default visible-xs">
-            <button type="button" class="navbar-toggle collapsed col-6 col-md-6">
+<div id="wrapper">
+    <div class="navbar navbar-default visible-xs">
+        <button type="button" class="navbar-toggle collapsed col-6 col-md-6">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-            <a href="./Home" class="navbar-brand animate__fadeIn col-6 col-md-6">
-                <img class="mlogo" src="assets/Asseta.png">
-            </a>
-        </div>
-
-        <nav class="sidebar center">
-            <div class="navbar-collapse" id="navbar-collapse">
-                <div class="site-header hidden-xs">
-                    <a class="site-brand" href="./Home" title="">
-                        <img class="logo" src="assets/Asseta.png">
-                    </a>
-                    <p></p>
-                </div>
-                <ul class="nav">
-                    <li><a href="./Portrait" id="navPortrait" title="">Portrait</a></li>
-                    <li><a href="./Landscape" id="navLandscape" title="">Landscape</a>
-                        <li>
-                            <li><a href="./Travel" id="navTravel" title="">Travel</a>
-                                <ul class="ddltravel" x-placement="right-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(100px, 0px, 0px); z-index:1;">
-                                </ul>
-                            </li>
-                            <li><a href="./35mm" id="nav35mm" title="">35mm</a></li>
-                            <li><a href="./Work" id="navWork" title="">Work</a></li>
-                            <li><a href="./Film" id="navFilm" title="">Film</a></li>
-                            <li><a href="./About" id="navAbout" title="">About</a></li>
-
-                </ul>
-
-                <nav class="social-wrap">
-                    <p class="">
-                        <a href="mailto:aijwenchew@gmail.com" target="_blank" class="sqs-svg-icon--wrapper email fa-icon social-link">
-                            <i class="far fa-envelope"></i>
-                        </a>
-                        <a class="fa-icon social-link" href="https://www.instagram.com/" title="">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </p>
-                    <p class="copyright">© a.ijwen, 2020 <br> All rights reserved. </p>
-                    </p>
-                </nav>
-            </div>
-        </nav>
+        <a href="./Home" class="navbar-brand  col-6 col-md-6">
+            <img class="mlogo" src="assets/Asseta.png">
+        </a>
     </div>
-</header>
+
+    <nav class="sidebar center">
+        <div class="navbar-collapse" id="navbar-collapse">
+            <div class="site-header hidden-xs">
+                <a class="site-brand" href="./Home" title="">
+                    <img class="logo" src="assets/Asseta.png">
+                </a>
+                <p></p>
+            </div>
+            <ul class="nav">
+                <li><a href="./Portrait" id="navPortrait" title="">Portrait</a></li>
+                <li><a href="./Landscape" id="navLandscape" title="">Landscape</a>
+                    <li>
+                        <li><a href="./Travel" id="navTravel" title="">Travel</a>
+                            <ul class="ddltravel" x-placement="right-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(100px, 0px, 0px); z-index:1;">
+                            </ul>
+                        </li>
+                        <li><a href="./35mm" id="nav35mm" title="">35mm</a></li>
+                        <li><a href="./Work" id="navWork" title="">Work</a></li>
+                        <li><a href="./Film" id="navFilm" title="">Film</a></li>
+                        <li><a href="./About" id="navAbout" title="">About</a></li>
+
+            </ul>
+
+            <nav class="social-wrap">
+                <p class="">
+                    <a href="mailto:aijwenchew@gmail.com" target="_blank" class="sqs-svg-icon--wrapper email fa-icon social-link">
+                        <i class="far fa-envelope"></i>
+                    </a>
+                    <a class="fa-icon social-link" href="https://www.instagram.com/" title="">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </p>
+                <p class="copyright">© a.ijwen, 2020 <br> All rights reserved. </p>
+                </p>
+            </nav>
+        </div>
+    </nav>
+    </header>
+</div>
 
 <body>
     <script>
-        document.getElementById("navWork").style.color = "grey";
+        document.getElementById("navTravel").style.color = "grey";
     </script>
-    <main class="mainclass" id="main-collapse">
+    <main class="mainclass data-scroll-container" id="main-collapse">
 
         <!-- Add your site or app content here -->
         <div class="hero-full-wrapper smooth-scroll-wrapper ">
             <div class="grid overview animate__animated animate__fadeIn animate__slow">
                 <div class="gutter-sizer"></div>
                 <div class="grid-sizer"></div>
-
                 <div class="grid-item ">
                     <a href="./Styrkemories" class="">
                         <div class="image-box">
@@ -136,8 +135,13 @@
                         <h3>Rich & Qi</h3>
                     </div>
                 </div>
+            </div>
+        </div>
     </main>
     <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            masonryBuild();
+        });
         var imgs = document.querySelectorAll(".grid-item"),
             i = 1;
         Array.prototype.forEach.call(imgs, function(img) {
@@ -152,11 +156,11 @@
         });
         const body = document.body,
             scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
-            height = scrollWrap.getBoundingClientRect().height / 100,
+            height = scrollWrap.getBoundingClientRect().height / 1000,
             speed = 0.05;
 
         var offset = 0;
-        b
+
         body.style.height = Math.floor(height) + "px";
 
         function smoothScroll() {
