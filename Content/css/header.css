@@ -78,6 +78,9 @@
                 padding: 4em;
                 width: 240px;
             }
+            .navbar {
+                margin-bottom: 2px;
+            }
         }
         /* Mobile */
         
