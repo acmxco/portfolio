@@ -4709,17 +4709,14 @@ main {
 }
 
 @media screen and (min-width: 1280px) and (orientation: landscape) {
-    main {
-        padding: 0px;
-    }
     .sidebar .navbar-collapse {
         margin-bottom: 100% !important;
     }
 }
 
-@media screen and (max-width: 1024px) and (orientation: landscape) {
+@media screen and (max-width: 1200px) and (orientation: landscape) {
     .sidebar .navbar-collapse {
-        margin-bottom: 180% !important;
+        margin-bottom: 200% !important;
     }
 }
 
