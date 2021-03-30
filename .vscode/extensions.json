@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "aeschli.vscode-css-formatter",
+        "nikolaosgeorgiou.html-fmt-vscode",
+        "lonefy.vscode-js-css-html-formatter",
+        "esbenp.prettier-vscode"
+    ]
+}

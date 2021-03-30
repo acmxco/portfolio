@@ -110,7 +110,7 @@
         }
         /* Mobile */
         
-        @media(max-width:700px) {
+        @media(max-width:700px) and (orientation:portrait){
             .site-brand {
                 padding-top: 11em;
                 font-weight: 700;
@@ -127,11 +127,63 @@
             }
             .navbar {
                 margin-bottom: 0;
-                height: 11em;
+                height: 10em;
                 min-height: 0;
+                margin-bottom: 0px!important;
+            }
+            .mlogo{
+                margin-top:-1.5em;
             }
         }
-        
+          @media(max-width:720px) and (orientation:landscape){
+              .navbar{
+                  margin-bottom: 0px!important;
+              }
+             .navbar-default {
+                 padding: 10px 50px 0px;
+            }
+            .mlogo{
+                    margin-top:-1.5em;
+                }
+            .sidebar .navbar-collapse {
+                padding: 0;
+                margin-bottom: 3em;
+                margin-top: 16em;
+            }
+          }
+            @media(max-width:800px) and (orientation:landscape){
+              .navbar{
+                  margin-bottom: 0px!important;
+              }
+             .navbar-default {
+                 padding: 30px 60px 10px;
+            }
+            .mlogo{
+                    margin-top:-1.5em;
+                }
+            .sidebar .navbar-collapse {
+                padding: 0;
+                margin-bottom: 3em;
+                margin-top: 16em;
+            }
+          }
+              @media(min-width:810px) and (orientation:landscape){
+              .navbar{
+                  margin-bottom: 0px!important;
+              }
+             .navbar-default {
+                 padding: 30px 60px 10px;
+            }
+            .mlogo{
+                    margin-top:-1.5em;
+                }
+            .sidebar .navbar-collapse {
+                padding: 0;
+                margin-bottom: 3em;
+                margin-top: -5em;
+            }
+          }
+
         @media(max-width:600px) {
             .mlogo {
                 width: 20%;
@@ -297,7 +349,21 @@
             opacity: 1;
             width: 90%!important;
         }
-        
+        body>main>div>.asset.image {
+            width: auto;
+        }
+        @media (max-width:850px) and (orientation:landscape){
+            .spacing{
+                margin-top:1em;
+                margin-left:-2em;
+            }
+            #main-collapse > div.top{
+                height:10vh!important;
+            }
+            body>main>div>.asset  {
+                height: 100%;
+            }
+        }
         body>main>.assets-grid {
             display: flex;
             position: relative;
@@ -342,7 +408,7 @@
             transition: opacity 500ms ease-in-out;
         }
         
-        @media(max-width:700px) {
+        @media(max-width:700px)and (orientation:portrait){
             body>main>.assets-grid {
                 display: flex;
                 position: relative;
@@ -362,8 +428,35 @@
                 transition: opacity 500ms ease-in-out;
             }
         }
-        
-        @media(orientation:landscape) {
+
+        @media(max-width:800px) and (orientation:landscape) {
+            body>main>.assets-grid {
+                display: flex;
+                position: relative;
+                align-items: center;
+                height: 70vh;
+                overflow-x: auto;
+                overflow-y: hidden;
+                margin-left: 0;
+                transition: margin-left 500ms ease;
+                padding: 0!important;
+                margin-top: 0px;
+            }
+            body>main .gallery-element {
+                display: block;
+                width: auto;
+                transition: opacity 500ms ease-in-out;
+            }
+        }
+          @media (max-width:850px) and (orientation:landscape) {
+            body>main .gallery-element {
+                height: 280px!important;
+            }
+            body>main>.assets-grid {
+                padding-top: 5em;
+            }
+        }
+        @media (min-width:850px) and (orientation:landscape) {
             body>main .gallery-element {
                 height: 550px;
             }
@@ -822,7 +915,7 @@
         
         @media (min-width:200px) {
             .grid {
-                top: -2em;
+                top: 1em;
                 margin-bottom: 3em;
             }
         }
@@ -872,7 +965,7 @@
                 margin-top: 11%;
             }
             .sidebar {
-                margin-top: -20em;
+                margin-top: -15em;
             }
         }
         

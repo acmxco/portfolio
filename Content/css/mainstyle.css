@@ -4702,12 +4702,16 @@ main {
     }
 }
 
-@media (min-width:992px) {
+@media  screen and(min-width:992px) and (orientation:portrait) {
     main {
         padding: 30px;
     }
 }
-
+@media screen and (min-width:992px) and (orientation:landscape) {
+    main {
+        padding: 0px;
+    }
+}
 .sidebar {
     position: fixed;
     top: 0;
