@@ -256,6 +256,7 @@
                 this.DOM.title = this.DOM.el.querySelector('.content__item-title');
                 this.DOM.subtitle = this.DOM.el.querySelector('.content__item-subtitle');
                 this.DOM.text = this.DOM.el.querySelector('.content__item-text');
+                this.DOM.top = this.DOM.el.querySelector('.content-top');
                 // Split the title into spans using charming.js
                 charming(this.DOM.title);
                 // And access the spans/letters.
@@ -396,6 +397,10 @@
                     // Hide the item´s image and show the content´s image. Should both be overlapping.
                     item.DOM.tilt.img.style.opacity = 0;
                     contentEl.DOM.img.style.visibility = 'visible';
+                    contentEl.DOM.img.style.zIndex='100';
+                    contentEl.DOM.title.style.zIndex='100';  
+                    contentEl.DOM.subtitle.style.zIndex='100';                    
+                    contentEl.DOM.text.style.zIndex='100';    
                     // Set the main content wrapper to absolute so it´s position at the top.
                     contentEl.DOM.el.parentNode.style.position = 'absolute';
                     // Hiding the grid scroll.

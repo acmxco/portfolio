@@ -32,7 +32,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <style>
-        button {}
+        /* .grid__item-bg {
+            background-color: red!important;
+        } */
     </style>
 </head>
 <script>
@@ -85,7 +87,7 @@
                 <div class="title">
                     <ul class="codrops-icon -top-left site-navigation cart-shift">
                         <li class="js-info info-link">
-                            <img class="logo" style="" src="assets/Asseta.png">
+                            <a href="/index"><img class="logo" style="" src="assets/Asseta.png"></a>
                         </li>
                     </ul>
                     <ul class="codrops-icon -top-right site-navigation cart-shift menu-open">
@@ -194,7 +196,9 @@
             </div>
             <!-- /grid-wrap -->
             <div class="content">
+
                 <div class="content__item">
+                                <div class="content-top"></div>
                     <div class="content__item-intro">
                         <img class="content__item-img" src="assets/artwork/Personal/1.jpg" alt="" />
                         <h2 class="content__item-title" style="color:white;"></h2>
@@ -245,18 +249,11 @@
                         </section>
                     </div>
                     <div class="content__item-text">
-                        <?php
-                        $files = glob("assets/artwork/Regis/*.*");
-
-                        for ($i = 0; $i < count($files); $i++) {
-                            $image = $files[$i];
-                            echo ' 	<div class="images">
-					<a href="' . $image . '">
-					<img src="' . $image . '" class="img-responsive"/>
-					</a>' . "</div>";
-                        }
-                        ?>
-
+                        <img class="img-responsive" src="assets/artwork/Regis/FB.jpg" />
+                        <img class="img-responsive" src="assets/artwork/Regis/Inner.jpg" />
+                        <img class="img-responsive" src="assets/artwork/Regis/Cover.jpg" />
+                        <img class="img-responsive" src="assets/artwork/Regis/Front.jpg" />
+                        <img class="img-responsive" src="assets/artwork/Regis/Back.jpg" />
                     </div>
                 </div>
                 <!-- /content__item -->
@@ -349,6 +346,7 @@
                     </div>
                 </div>
                 <!-- /content__item -->
+
                 <button class="content__close">X</button>
                 <svg class="content__indicator icon icon--caret">
                     <use xlink:href="#icon-caret"></use>
@@ -367,13 +365,6 @@
             left: 0,
             ease: Expo.easeInOut
         });
-
-        // t1.from(".nav-container", 1, {
-        //     scaleY: "0%",
-        //     ease: Expo.easeInOut,
-        //     transformOrigin: "0% -100%"
-        // });
-
 
         t1.staggerFrom(
             ".menu > div",
@@ -399,6 +390,8 @@
     <script src="Content/js/charming.min.js"></script>
     <script src="Content/js/TweenMax.min.js"></script>
     <script src="Content/js/demo.js"></script>
+    <!-- <script src="Content/js/masonry.pkgd.min.js"></script> -->
+
 </body>
 
 </html>
