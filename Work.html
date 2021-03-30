@@ -40,12 +40,19 @@
     
     div .visible {
         opacity: 1!important;
+    }  
+    body {
+        scroll-behavior: smooth;
     }
-    
-    .smooth-scroll-wrapper {
-        z-index: 2;
-        overflow: hidden;
-    }
+    .lazyloaded {
+        opacity: 0.1;
+        will-change: opacity;
+        transition: all 1s ease .45s;
+} 
+     .lazyloaded.loaded {
+        opacity: 1;
+}
+
 </style>
 <div id="wrapper">
     <div class="navbar navbar-default visible-xs">
@@ -114,7 +121,7 @@
                 <div class="grid-item ">
                     <a href="./Styrkemories" class="">
                         <div class="image-box">
-                            <img class="img-responsive fade-in" data-src="assets/images/Work/Styrkemories/SM-1-4.jpg" />
+                            <img class="img-responsive fade-in lazyloaded" data-src="assets/images/Work/Styrkemories/SM-1-4.jpg" />
                         </div>
                     </a>
                     <p class="link">2020</p>
@@ -126,7 +133,7 @@
                 <div class="grid-item ">
                     <a href="./RichQi" class="">
                         <div class="image-box">
-                            <img class="img-responsive fade-in" data-src="assets/images/Wedding/RichQi/IMG_4569-Edit.jpg" />
+                            <img class="img-responsive fade-in lazyloaded" data-src="assets/images/Wedding/RichQi/IMG_4569-Edit.jpg" />
                         </div>
                     </a>
                     <p class="link">2020</p>
@@ -139,10 +146,7 @@
         </div>
     </main>
     <script>
-        document.addEventListener("DOMContentLoaded", function(event) {
-            masonryBuild();
-        });
-        var imgs = document.querySelectorAll(".grid-item"),
+  var imgs = document.querySelectorAll(".grid-item"),
             i = 1;
         Array.prototype.forEach.call(imgs, function(img) {
                 setTimeout(function() {
@@ -150,33 +154,89 @@
                 }, 700 * i)
                 i++;
             })
-            // Mansory 
         document.addEventListener("DOMContentLoaded", function(event) {
             masonryBuild();
         });
-        // const body = document.body,
-        //     scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
-        //     height = scrollWrap.getBoundingClientRect().height / 1000,
-        //     speed = 0.05;
-
-        // var offset = 0;
-
-        // body.style.height = Math.floor(height) + "px";
-
-        // function smoothScroll() {
-        //     offset += (window.pageYOffset - offset) * speed;
-
-        //     var scroll = "translateY(-" + offset + "px) translateZ(0)";
-        //     scrollWrap.style.transform = scroll;
-
-        //     callScroll = requestAnimationFrame(smoothScroll);
-        // }
-
-        // smoothScroll();
         document.addEventListener("DOMContentLoaded", function(event) {
             navbarToggleSidebar();
             navActivePage();
         });
+        class LazyLoad {
+        constructor(items, options) {
+    this.options = {
+      root: null,
+      rootMargin: '0px 0px 0px 0px',
+      thresholds: 0.1,
+      loadedClass: 'loaded',
+      throttleTime: 10,
+      ...options,
+    };
+    this.items = document.querySelectorAll(items);
+    this.lazyLoadThrottle = null;
+    this.notSupportedHandler = this.notSupported.bind(this);
+
+  }
+
+  init() {
+    return 'IntersectionObserver' in window ? this.onIntersection() : this.notSupportedHandlers();
+  }
+
+  notSupportedHandlers() {
+    document.addEventListener('scroll', this.notSupportedHandler);
+    window.addEventListener('resize', this.notSupportedHandler);
+    window.addEventListener('orientationchange', this.notSupportedHandler);
+  }
+
+  notSupported() {
+    const lazyItems = [...this.items];
+    this.lazyLoadThrottle = setTimeout(() => {
+      lazyItems
+        .filter(item => !item.classList.contains(this.options.loadedClass))
+        .forEach(item => {
+          if (
+            item.getBoundingClientRect().top <= window.innerHeight &&
+            item.getBoundingClientRect().bottom >= 0 &&
+            getComputedStyle(item).display !== 'none'
+          ) {
+            this.lazyImage(item);
+            if (lazyItems.every(image => image.classList.contains(this.options.loadedClass))) {
+              document.removeEventListener('scroll', this.notSupportedHandler);
+              window.removeEventListener('resize', this.notSupportedHandler);
+              window.removeEventListener('orientationchange', this.notSupportedHandler);
+            }
+          }
+        });
+    }, this.options.throttleTime);
+  }
+
+  onIntersection() {
+    const imagesObserver = new IntersectionObserver((entries, self) => {
+      entries
+        .filter(entry => entry.isIntersecting)
+        .forEach(entry => {
+          this.lazyImage(entry.target);
+          self.unobserve(entry.target);
+        });
+    }, this.options);
+    this.items.forEach(image => {
+      imagesObserver.observe(image);
+    });
+  }
+
+  lazyImage(asset) {
+    const image = asset;
+    image.src = image.dataset.src;
+    // image.removeAttribute('data-src');
+    image.classList.add(this.options.loadedClass);
+  }
+}
+
+const lazy = new LazyLoad('.lazyloaded');
+
+document.addEventListener('DOMContentLoaded', () => {
+  lazy.init();
+
+});
     </script>
     <script src="Content/js/main.js"></script>
     <script type="text/javascript" src="Content/js/main.85741bff.js"></script>

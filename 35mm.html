@@ -31,12 +31,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TimelineMax.min.js"></script>
 </head>
 <style type="text/css">
-    .grid-item img {
+    .grid-item {
         opacity: 0;
         transition: all 1s ease .45s;
     }
     
-    .grid-item img.visible {
+    div .visible {
         opacity: 1;
     }
     
@@ -44,6 +44,14 @@
         z-index: 2;
         overflow: hidden;
     }
+    .lazyloaded {
+        opacity: 0.1;
+        will-change: opacity;
+        transition: all 1s ease .45s;
+} 
+     .lazyloaded.loaded {
+        opacity: 1;
+}
 </style>
 
 <div class="navbar navbar-default visible-xs">
@@ -72,12 +80,6 @@
                 <li>
                     <li><a href="./Travel" id="navTravel" title="">Travel</a>
                         <ul class="ddltravel" x-placement="right-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(100px, 0px, 0px); z-index:1;">
-
-                            <!-- <li><a href="./Taiwan" id="navTaiwan" title="">Taiwan, 2018</a></li>
-						<li><a href="./Tioman" id="navTioman" title="">Tioman, 2018</a></li>
-						<li><a href="./Japan" id="navJapan" title="">Japan, 2016</a></li>
--->
-
                         </ul>
                     </li>
                     <li><a href="./35mm" id="nav35mm" title="">35mm</a></li>
@@ -118,122 +120,122 @@
                     <div class="grid-sizer"></div>
                     <div class="grid-item asset">
                         <a href="assets/images/35mm/000023890028.jpg">
-                            <img src="assets/images/35mm/000023890028.jpg" class="img-responsive" id="preload" />
+                            <img src="assets/images/35mm/000023890028.jpg" class="img-responsive lazyloaded" id="preload" />
                         </a>
                     </div>
                     <div class="grid-item asset">
                         <a href="assets/images/35mm/000023890010.jpg">
-                            <img src="assets/images/35mm/000023890010.jpg" class="img-responsive" id="preload" />
+                            <img src="assets/images/35mm/000023890010.jpg" class="img-responsive lazyloaded" id="preload" />
                         </a>
                     </div>
                     <div class="grid-item asset">
                         <a href="assets/images/35mm/000023890007.jpg">
-                            <img src="assets/images/35mm/000023890007.jpg" class="img-responsive" id="preload" />
+                            <img src="assets/images/35mm/000023890007.jpg" class="img-responsive lazyloaded" id="preload" />
                         </a>
                     </div>
                     <div class="grid-item asset">
                         <a href="assets/images/35mm/000023880029.jpg">
-                            <img src="assets/images/35mm/000023880029.jpg" class="img-responsive" id="preload" />
+                            <img src="assets/images/35mm/000023880029.jpg" class="img-responsive lazyloaded" id="preload" />
                         </a>
                     </div>
                     <div class="grid-item asset">
                         <a href="assets/images/35mm/000023880004.jpg">
-                            <img src="assets/images/35mm/000023880004.jpg" class="img-responsive" id="preload" />
+                            <img src="assets/images/35mm/000023880004.jpg" class="img-responsive lazyloaded" id="preload" />
                         </a>
                     </div>
                     <div class="grid-item asset">
                         <a href="assets/images/35mm/A024425R11619.jpg">
-                            <img src="assets/images/35mm/A024425R11619.jpg" class="img-responsive" id="preload" />
+                            <img src="assets/images/35mm/A024425R11619.jpg" class="img-responsive lazyloaded" id="preload" />
                         </a>
                     </div>
                     <div class="grid-item asset">
                         <a href="assets/images/35mm/000244680027.jpg">
-                            <img src="assets/images/35mm/000244680027.jpg" class="img-responsive" id="preload" />
+                            <img src="assets/images/35mm/000244680027.jpg" class="img-responsive lazyloaded" id="preload" />
                         </a>
                     </div>
                     <div class="grid-item asset">
                         <a href="assets/images/35mm/000244680035.jpg">
-                            <img src="assets/images/35mm/000244680035.jpg" class="img-responsive" id="preload" />
+                            <img src="assets/images/35mm/000244680035.jpg" class="img-responsive lazyloaded" id="preload" />
                         </a>
                     </div>
                     <div class="grid-item asset">
                         <a href="assets/images/35mm/F1000024.jpg">
-                            <img src="assets/images/35mm/F1000024.jpg" class="img-responsive" id="preload" />
+                            <img src="assets/images/35mm/F1000024.jpg" class="img-responsive lazyloaded" id="preload" />
                         </a>
                     </div>
                     <div class="grid-item asset">
                         <a href="assets/images/35mm/IMG_1747.jpg">
-                            <img src="assets/images/35mm/IMG_1747.jpg" class="img-responsive" id="preload" />
+                            <img src="assets/images/35mm/IMG_1747.jpg" class="img-responsive lazyloaded" id="preload" />
                         </a>
                     </div>
                     <div class="grid-item asset">
                         <a href="assets/images/35mm/R1015460006.jpg">
-                            <img src="assets/images/35mm/R1015460006.jpg" class="img-responsive" id="preload" />
+                            <img src="assets/images/35mm/R1015460006.jpg" class="img-responsive lazyloaded" id="preload" />
                         </a>
                     </div>
                     <div class="grid-item asset">
                         <a href="assets/images/35mm/IMG_1752.jpg">
-                            <img src="assets/images/35mm/IMG_1752.jpg" class="img-responsive" id="preload" />
+                            <img src="assets/images/35mm/IMG_1752.jpg" class="img-responsive lazyloaded" id="preload" />
                         </a>
                     </div>
                     <div class="grid-item asset">
                         <a href="assets/images/35mm/R1015460027.jpg">
-                            <img src="assets/images/35mm/R1-01546-0027.jpg" class="img-responsive" id="preload" />
+                            <img src="assets/images/35mm/R1-01546-0027.jpg" class="img-responsive lazyloaded" id="preload" />
                         </a>
                     </div>
                     <div class="grid-item asset">
                         <a href="assets/images/35mm/F1000036.jpg">
-                            <img src="assets/images/35mm/F1000036.jpg" class="img-responsive" id="preload" />
+                            <img src="assets/images/35mm/F1000036.jpg" class="img-responsive lazyloaded" id="preload" />
                         </a>
                     </div>
                     <div class="grid-item asset">
                         <a href="assets/images/35mm/F1010024.jpg">
-                            <img src="assets/images/35mm/F1010024.jpg" class="img-responsive" id="preload" />
+                            <img src="assets/images/35mm/F1010024.jpg" class="img-responsive lazyloaded" id="preload" />
                         </a>
                     </div>
                     <div class="grid-item asset">
                         <a href="assets/images/35mm/F1010010.jpg">
-                            <img src="assets/images/35mm/F1010010.jpg" class="img-responsive" id="preload" />
+                            <img src="assets/images/35mm/F1010010.jpg" class="img-responsive lazyloaded" id="preload" />
                         </a>
                     </div>
                     <div class="grid-item asset">
                         <a href="assets/images/35mm/F1000023.jpg">
-                            <img src="assets/images/35mm/F1000023.jpg" class="img-responsive" id="preload" />
+                            <img src="assets/images/35mm/F1000023.jpg" class="img-responsive lazyloaded" id="preload" />
                         </a>
                     </div>
                     <div class="grid-item asset">
                         <a href="assets/images/35mm/F1000014.jpg">
-                            <img src="assets/images/35mm/F1000014.jpg" class="img-responsive" id="preload" />
+                            <img src="assets/images/35mm/F1000014.jpg" class="img-responsive lazyloaded" id="preload" />
                         </a>
                     </div>
                     <div class="grid-item asset">
                         <a href="assets/images/35mm/F1000013.jpg">
-                            <img src="assets/images/35mm/F1000013.jpg" class="img-responsive" id="preload" />
+                            <img src="assets/images/35mm/F1000013.jpg" class="img-responsive lazyloaded" id="preload" />
                         </a>
                     </div>
                     <div class="grid-item asset">
                         <a href="assets/images/35mm/000244680031.jpg">
-                            <img src="assets/images/35mm/000244680031.jpg" class="img-responsive" id="preload" />
+                            <img src="assets/images/35mm/000244680031.jpg" class="img-responsive lazyloaded" id="preload" />
                         </a>
                     </div>
                     <div class="grid-item asset">
                         <a href="assets/images/35mm/000023880017.jpg">
-                            <img src="assets/images/35mm/000023880017.jpg" class="img-responsive" id="preload" />
+                            <img src="assets/images/35mm/000023880017.jpg" class="img-responsive lazyloaded" id="preload" />
                         </a>
                     </div>
                     <div class="grid-item asset">
                         <a href="assets/images/35mm/000059.jpg">
-                            <img src="assets/images/35mm/000059.jpg" class="img-responsive" id="preload" />
+                            <img src="assets/images/35mm/000059.jpg" class="img-responsive lazyloaded" id="preload" />
                         </a>
                     </div>
                     <div class="grid-item asset">
                         <a href="assets/images/35mm/000060-1.jpg">
-                            <img src="assets/images/35mm/000060-1.jpg" class="img-responsive" id="preload" />
+                            <img src="assets/images/35mm/000060-1.jpg" class="img-responsive lazyloaded" id="preload" />
                         </a>
                     </div>
                     <div class="grid-item asset">
                         <a href="assets/images/35mm/000052.jpg">
-                            <img src="assets/images/35mm/000052.jpg" class="img-responsive" id="preload" />
+                            <img src="assets/images/35mm/000052.jpg" class="img-responsive lazyloaded" id="preload" />
                         </a>
                     </div>
                 </div>
@@ -249,7 +251,7 @@
     <script src='https://static2.format.com/static/theme_api/v2/4ormat-7953facfd4e95c07a2bb00d6f89291bb3a4697663ff0b39a7026906dfb91fcd3.js' type='text/javascript'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
     <script>
-        var imgs = document.querySelectorAll(".grid-item img"),
+        var imgs = document.querySelectorAll(".grid-item"),
             i = 1;
         Array.prototype.forEach.call(imgs, function(img) {
             setTimeout(function() {
@@ -271,30 +273,84 @@
                 showCounter: false
             });
         })();
-        // const body = document.body,
-        //     scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
-        //     height = scrollWrap.getBoundingClientRect().height / 10000000,
-        //     speed = 0.05;
 
-        // var offset = 0;
+        class LazyLoad {
+     constructor(items, options) {
+    this.options = {
+      root: null,
+      rootMargin: '0px 0px 0px 0px',
+      thresholds: 0.1,
+      loadedClass: 'loaded',
+      throttleTime: 10,
+      ...options,
+    };
+    this.items = document.querySelectorAll(items);
+    this.lazyLoadThrottle = null;
+    this.notSupportedHandler = this.notSupported.bind(this);
 
-        // body.style.height = Math.floor(height) + "px";
+  }
 
-        // function smoothScroll() {
-        //     offset += (window.pageYOffset - offset) * speed;
+  init() {
+    return 'IntersectionObserver' in window ? this.onIntersection() : this.notSupportedHandlers();
+  }
 
-        //     var scroll = "translateY(-" + offset + "px) translateZ(0)";
-        //     scrollWrap.style.transform = scroll;
+  notSupportedHandlers() {
+    document.addEventListener('scroll', this.notSupportedHandler);
+    window.addEventListener('resize', this.notSupportedHandler);
+    window.addEventListener('orientationchange', this.notSupportedHandler);
+  }
 
-        //     callScroll = requestAnimationFrame(smoothScroll);
-        // }
-
-        // smoothScroll();
-        document.addEventListener("DOMContentLoaded", function(event) {
-            navbarToggleSidebar();
-            navActivePage();
+  notSupported() {
+    const lazyItems = [...this.items];
+    this.lazyLoadThrottle = setTimeout(() => {
+      lazyItems
+        .filter(item => !item.classList.contains(this.options.loadedClass))
+        .forEach(item => {
+          if (
+            item.getBoundingClientRect().top <= window.innerHeight &&
+            item.getBoundingClientRect().bottom >= 0 &&
+            getComputedStyle(item).display !== 'none'
+          ) {
+            this.lazyImage(item);
+            if (lazyItems.every(image => image.classList.contains(this.options.loadedClass))) {
+              document.removeEventListener('scroll', this.notSupportedHandler);
+              window.removeEventListener('resize', this.notSupportedHandler);
+              window.removeEventListener('orientationchange', this.notSupportedHandler);
+            }
+          }
         });
-    </script>
+    }, this.options.throttleTime);
+  }
+
+  onIntersection() {
+    const imagesObserver = new IntersectionObserver((entries, self) => {
+      entries
+        .filter(entry => entry.isIntersecting)
+        .forEach(entry => {
+          this.lazyImage(entry.target);
+          self.unobserve(entry.target);
+        });
+    }, this.options);
+    this.items.forEach(image => {
+      imagesObserver.observe(image);
+    });
+  }
+
+  lazyImage(asset) {
+    const image = asset;
+    image.src = image.dataset.src;
+    // image.removeAttribute('data-src');
+    image.classList.add(this.options.loadedClass);
+  }
+}
+
+const lazy = new LazyLoad('.lazyloaded');
+
+document.addEventListener('DOMContentLoaded', () => {
+  lazy.init();
+
+});
+</script>
 </body>
 <div class="footer"></div>
 
