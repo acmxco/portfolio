@@ -1572,7 +1572,7 @@ html.ios .detail .full-height-wrapper {
 }
 
 .-full-height-margin:not(:first-child) {
-    padding: 0 0 19vh
+    padding: 0 0 25vh
 }
 
 .-full-height-margin:nth-child(2) {
@@ -1622,7 +1622,7 @@ html.ios .detail .full-height-wrapper {
 
 @media (min-width:371px) and (max-width:411px) {
     .imgp .hover-title {
-        margin-top: 25rem;
+        margin-top: 5rem;
     }
 }
 
@@ -1632,7 +1632,7 @@ html.ios .detail .full-height-wrapper {
         font-size: 0.8em;
     }
     .imgp .hover-title {
-        margin-top: 27rem;
+        margin-top: 0rem;
     }
     .-full-height-margin:last-child {
         padding: 0 0 20vh
