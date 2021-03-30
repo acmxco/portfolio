@@ -40,19 +40,13 @@
     
     div .visible {
         opacity: 1!important;
-    }  
-    body {
-        scroll-behavior: smooth;
+        delay: 50s;
     }
-    .lazyloaded {
-        opacity: 0.1;
-        will-change: opacity;
-        transition: all 1s ease .45s;
-} 
-     .lazyloaded.loaded {
-        opacity: 1;
-}
-
+    
+    .smooth-scroll-wrapper {
+        z-index: 2;
+        overflow: hidden;
+    }
 </style>
 <div id="wrapper">
     <div class="navbar navbar-default visible-xs">
@@ -146,14 +140,17 @@
         </div>
     </main>
     <script>
-  var imgs = document.querySelectorAll(".grid-item"),
+        var imgs = document.querySelectorAll(".grid-item"),
             i = 1;
         Array.prototype.forEach.call(imgs, function(img) {
-                setTimeout(function() {
-                    img.classList.add("visible")
-                }, 700 * i)
-                i++;
-            })
+            setTimeout(function() {
+                img.classList.add("visible")
+            }, 1000 * i)
+            i++;
+        })
+        $('img[src="/images/lazy.jpg"]').each(function(index, el) {
+            $(el).attr('src', $(el).data('src'));
+        });
         document.addEventListener("DOMContentLoaded", function(event) {
             masonryBuild();
         });
@@ -161,82 +158,17 @@
             navbarToggleSidebar();
             navActivePage();
         });
-        class LazyLoad {
-        constructor(items, options) {
-    this.options = {
-      root: null,
-      rootMargin: '0px 0px 0px 0px',
-      thresholds: 0.1,
-      loadedClass: 'loaded',
-      throttleTime: 10,
-      ...options,
-    };
-    this.items = document.querySelectorAll(items);
-    this.lazyLoadThrottle = null;
-    this.notSupportedHandler = this.notSupported.bind(this);
-
-  }
-
-  init() {
-    return 'IntersectionObserver' in window ? this.onIntersection() : this.notSupportedHandlers();
-  }
-
-  notSupportedHandlers() {
-    document.addEventListener('scroll', this.notSupportedHandler);
-    window.addEventListener('resize', this.notSupportedHandler);
-    window.addEventListener('orientationchange', this.notSupportedHandler);
-  }
-
-  notSupported() {
-    const lazyItems = [...this.items];
-    this.lazyLoadThrottle = setTimeout(() => {
-      lazyItems
-        .filter(item => !item.classList.contains(this.options.loadedClass))
-        .forEach(item => {
-          if (
-            item.getBoundingClientRect().top <= window.innerHeight &&
-            item.getBoundingClientRect().bottom >= 0 &&
-            getComputedStyle(item).display !== 'none'
-          ) {
-            this.lazyImage(item);
-            if (lazyItems.every(image => image.classList.contains(this.options.loadedClass))) {
-              document.removeEventListener('scroll', this.notSupportedHandler);
-              window.removeEventListener('resize', this.notSupportedHandler);
-              window.removeEventListener('orientationchange', this.notSupportedHandler);
-            }
-          }
-        });
-    }, this.options.throttleTime);
-  }
-
-  onIntersection() {
-    const imagesObserver = new IntersectionObserver((entries, self) => {
-      entries
-        .filter(entry => entry.isIntersecting)
-        .forEach(entry => {
-          this.lazyImage(entry.target);
-          self.unobserve(entry.target);
-        });
-    }, this.options);
-    this.items.forEach(image => {
-      imagesObserver.observe(image);
-    });
-  }
-
-  lazyImage(asset) {
-    const image = asset;
-    image.src = image.dataset.src;
-    // image.removeAttribute('data-src');
-    image.classList.add(this.options.loadedClass);
-  }
-}
-
-const lazy = new LazyLoad('.lazyloaded');
-
-document.addEventListener('DOMContentLoaded', () => {
-  lazy.init();
-
-});
+        (function() {
+            var $gallery = new SimpleLightbox('.grid-item a', {
+                close: true,
+                preloading: true,
+                widthRatio: 0.7,
+                heightRatio: 0.8,
+                scaleImageToRatio: true,
+                disableScroll: true,
+                showCounter: false
+            });
+        })();
     </script>
     <script src="Content/js/main.js"></script>
     <script type="text/javascript" src="Content/js/main.85741bff.js"></script>

@@ -4730,8 +4730,9 @@ main {
 }
 
 .sidebar .navbar-collapse {
-    padding: 0;
-    margin-bottom: 3em;
+    margin-bottom: 50%;
+    padding:2em;
+    position: absolute;
 }
 
 .sidebar.open {
