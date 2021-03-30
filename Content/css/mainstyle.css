@@ -4712,6 +4712,9 @@ main {
     main {
         padding: 0px;
     }
+    .sidebar .navbar-collapse {
+        margin-bottom: 80%!important;
+    }
 }
 
 .sidebar {
