@@ -694,10 +694,10 @@ main {
         margin-top: -1em;
     }
     .imgp .hover-title {
-        margin-top: 18rem!important;
+        margin-top: 5rem!important;
     }
     .imgl .hover-title {
-        margin-top: 14rem!important;
+        margin-top: 5rem!important;
     }
     .hover-container p {
         margin-top: 5em;
@@ -751,10 +751,10 @@ main {
         margin-top: -1em;
     }
     .imgp .hover-title {
-        margin-top: 27rem;
+        margin-top: 5rem;
     }
     .imgl .hover-title {
-        margin-top: 19rem;
+        margin-top: 5rem;
     }
     .hover-container p {
         margin-top: 7em;
@@ -837,10 +837,10 @@ main {
         margin-top: 2.5vh;
     }
     .imgp .hover-title {
-        margin-top: 25rem;
+        margin-top: 5rem;
     }
     .imgl .hover-title {
-        margin-top: 18rem;
+        margin-top: 5em;
     }
 }
 
@@ -873,10 +873,10 @@ main {
 
 @media screen and (min-width: 540px) and (max-width: 540px) {
     .imgp .hover-title {
-        margin-top: 32rem!important;
+        margin-top: 5rem!important;
     }
     .imgl .hover-title {
-        margin-top: 22rem;
+        margin-top: 5rem;
     }
     .caption {
         margin-top: 5em!important;
@@ -925,7 +925,7 @@ main {
 
 @media screen and (max-width: 690px) and (orientation:portrait) {
     .imgp .hover-title {
-        margin-top: 20rem;
+        margin-top: 5rem;
     }
     /* .imgl .hover-title {
         margin-top: 16rem;
@@ -1632,7 +1632,7 @@ html.ios .detail .full-height-wrapper {
         font-size: 0.8em;
     }
     .imgp .hover-title {
-        margin-top: 0rem;
+        margin-top: 5rem;
     }
     .-full-height-margin:last-child {
         padding: 0 0 20vh
