@@ -4717,6 +4717,12 @@ main {
     }
 }
 
+@media screen and (max-width: 992px) and (orientation: landscape) {
+    .sidebar .navbar-collapse {
+        margin-bottom: 180% !important;
+    }
+}
+
 .sidebar {
     position: fixed;
     top: 0;
