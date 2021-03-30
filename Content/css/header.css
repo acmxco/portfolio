@@ -372,7 +372,7 @@ body>main>div>.asset.image {
     width: auto;
 }
 
-@media (max-width: 850px) and (orientation: landscape) {
+@media (max-width: 1024px) and (orientation: landscape) {
     .spacing {
         margin-top: 1em;
         margin-left: -2em;
@@ -382,6 +382,9 @@ body>main>div>.asset.image {
     }
     body>main>div>.asset {
         height: 100%;
+    }
+    .gallery-element {
+        height: 550px !important;
     }
 }
 
