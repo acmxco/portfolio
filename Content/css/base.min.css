@@ -835,7 +835,7 @@ main {
         margin-top: 2.5vh;
     }
     .imgp .hover-title {
-        margin-top: 27rem;
+        margin-top: 20em;
     }
     .imgl .hover-title {
         margin-top: 19em;
@@ -1620,7 +1620,7 @@ html.ios .detail .full-height-wrapper {
 
 @media (min-width: 371px) and (max-width: 411px) {
     .imgp .hover-title {
-        margin-top: 5rem;
+        margin-top: 15rem;
     }
 }
 
@@ -1630,7 +1630,7 @@ html.ios .detail .full-height-wrapper {
         font-size: 0.8em;
     }
     .imgp .hover-title {
-        margin-top: 27rem;
+        margin-top: 15rem;
     }
     .-full-height-margin:last-child {
         padding: 0 0 20vh;
