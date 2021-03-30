@@ -60,7 +60,7 @@
 
     <nav class="sidebar center">
         <div class="navbar-collapse" id="navbar-collapse">
-            <div class="site-header hidden-md">
+            <div class="site-header hidden-xs">
                 <a class="site-brand" href="./Home" title="">
                     <img class="logo" src="assets/Asseta.png">
                 </a>
@@ -99,7 +99,7 @@
 
 <body class="preload loading">
     <script>
-        document.getElementById("navLandscape").style.color = "grey";
+        document.getElementById("navPortrait").style.color = "grey";
     </script>
     <main class="mainclass data-scroll-container" id="main-collapse">
         <!-- Add your site or app content here -->
@@ -249,7 +249,7 @@
         Array.prototype.forEach.call(imgs, function(img) {
             setTimeout(function() {
                 img.classList.add("visible")
-            }, 1000 * i)
+            }, 700 * i)
             i++;
         })
         $('img[src="/images/lazy.jpg"]').each(function(index, el) {
