@@ -619,14 +619,14 @@
     const grid = new Grid(document.querySelector(".grid"));
 
     // Preload images.
-    // imagesLoaded(document.querySelectorAll('.grid__item-img'), () => {
-    //     body.classList.remove('loading');
-    //     var msnry = new Masonry(grid.DOM.el, {
-    //         // options
-    //         itemSelector: '.grid__item',
-    //         columnWidth: 260,
-    //         gutter: 100,
-    //         fitWidth: true
-    //     });
-    // });
+    imagesLoaded(document.querySelectorAll(".grid__item-img"), () => {
+        body.classList.remove("loading");
+        var msnry = new Masonry(grid.DOM.el, {
+            // options
+            itemSelector: ".grid__item",
+            columnWidth: 260,
+            gutter: 100,
+            fitWidth: true,
+        });
+    });
 }
