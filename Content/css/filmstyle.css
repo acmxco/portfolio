@@ -1808,7 +1808,7 @@ body.gallery main {
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     body.gallery main {
         padding: 0 10px;
-        margin-top: 10%;
+        margin-top: 5%;
     }
     body.gallery .asset.video {
         padding-bottom: 10px;
