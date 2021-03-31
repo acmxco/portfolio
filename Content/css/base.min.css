@@ -682,7 +682,7 @@ main {
         margin-top: -1em;
     }
     .imgp .hover-title {
-        margin-top: 18rem !important;
+        margin-top: 15rem !important;
     }
     .imgl .hover-title {
         margin-top: 14rem !important;
@@ -1634,7 +1634,7 @@ html.ios .detail .full-height-wrapper {
         font-size: 0.8em;
     }
     .imgp .hover-title {
-        margin-top: 18em;
+        margin-top: 15em;
     }
     .-full-height-margin:last-child {
         padding: 0 0 20vh;
