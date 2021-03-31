@@ -364,6 +364,11 @@ main {
     margin: 0;
 }
 
+.codrops-links--hidden {
+    height: 0;
+    overflow: hidden;
+}
+
 
 /* Top Navigation Style */
 
@@ -390,10 +395,6 @@ main {
 .grid-wrap--hidden {
     height: 0;
     overflow: hidden;
-}
-
-.grid-wrap--hidden>.frame {
-    visibility: hidden;
 }
 
 .grid {
@@ -430,8 +431,11 @@ main {
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
+    width: 50%;
     height: 100%;
-    background: var(--grid-item-bg);
+    background-color: white;
+    margin: 0 auto;
 }
 
 .grid__item-img {
@@ -473,15 +477,6 @@ main {
     grid-area: 1 / 1 / 1 / 1;
 }
 
-.content-top {
-    top: 0;
-    height: 150px;
-    width: 100%;
-    background-color: #fff;
-    position: fixed;
-    z-index: -1;
-}
-
 .js .content__item {
     height: 0;
     opacity: 0;
@@ -513,7 +508,6 @@ main {
     display: block;
     margin: 0 auto;
     grid-area: 1 / 1 / 1 / 1;
-    z-index: 10;
 }
 
 .js .content__item-img {
@@ -529,7 +523,6 @@ main {
     padding: 0 5vw;
     white-space: nowrap;
     grid-area: 1 / 1 / 1 / 1;
-    z-index: 100;
 }
 
 .content__item-title>span {
@@ -542,14 +535,12 @@ main {
     font-size: 1.25rem;
     font-weight: normal;
     margin: 3rem auto;
-    z-index: 100;
 }
 
 .content__item-text {
     text-align: justify;
     max-width: 80%;
     margin: 0 auto;
-    z-index: 100;
 }
 
 .content__item-text p {
@@ -678,7 +669,6 @@ main {
         width: 60px;
         padding: 0em;
         margin-top: -10%;
-        z-index: 5;
     }
     .grid__item-img {
         padding: 2.5em;
@@ -692,10 +682,10 @@ main {
         margin-top: -1em;
     }
     .imgp .hover-title {
-        margin-top: 5rem !important;
+        margin-top: 18rem !important;
     }
     .imgl .hover-title {
-        margin-top: 5rem !important;
+        margin-top: 14rem !important;
     }
     .hover-container p {
         margin-top: 5em;
@@ -749,10 +739,10 @@ main {
         margin-top: -1em;
     }
     .imgp .hover-title {
-        margin-top: 5rem;
+        margin-top: 27rem;
     }
     .imgl .hover-title {
-        margin-top: 5rem;
+        margin-top: 19rem;
     }
     .hover-container p {
         margin-top: 7em;
@@ -835,10 +825,10 @@ main {
         margin-top: 2.5vh;
     }
     .imgp .hover-title {
-        margin-top: 5rem;
+        margin-top: 25rem;
     }
     .imgl .hover-title {
-        margin-top: 5em;
+        margin-top: 18rem;
     }
 }
 
@@ -871,10 +861,10 @@ main {
 
 @media screen and (min-width: 540px) and (max-width: 540px) {
     .imgp .hover-title {
-        margin-top: 5rem !important;
+        margin-top: 32rem !important;
     }
     .imgl .hover-title {
-        margin-top: 5rem;
+        margin-top: 22rem;
     }
     .caption {
         margin-top: 5em !important;
@@ -923,7 +913,7 @@ main {
 
 @media screen and (max-width: 690px) and (orientation: portrait) {
     .imgp .hover-title {
-        margin-top: 5rem;
+        margin-top: 20rem;
     }
     /* .imgl .hover-title {
         margin-top: 16rem;
@@ -1352,7 +1342,7 @@ h1 {
     line-height: 1.1;
 }
 
-@media (max-width: 768px) and (orientation: portrait) {
+@media only screen and (max-width: 768px) and (orientation: portrait) {
     .-full-height-margin,
     .detail .full-height-wrapper {
         height: auto;
@@ -1360,26 +1350,26 @@ h1 {
     }
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     .-full-height-margin,
     .detail .full-height-wrapper {
         height: auto;
     }
 }
 
-@media (min-width: 1281px) {
+@media only screen and (min-width: 1281px) {
     .is-hoverable .-lrg {
         font-size: 14vw;
     }
 }
 
-@media (min-width: 1366px) {
+@media only screen and (min-width: 1366px) {
     .is-hoverable .-lrg {
         font-size: 185px;
     }
 }
 
-@media (min-width: 1920px) {
+@media only screen and (min-width: 1920px) {
     .is-hoverable .-lrg {
         font-size: 280px;
         letter-spacing: 8px;
@@ -1570,34 +1560,34 @@ html.ios .detail .full-height-wrapper {
 }
 
 .-full-height-margin:not(:first-child) {
-    padding: 0 0 25vh;
+    padding: 0 0 19vh;
 }
 
 .-full-height-margin:nth-child(2) {
     padding: 15vh 0 25vh;
 }
 
-@media (orientation: landscape) {
+@media only screen and (orientation: landscape) {
     .menu-container.-full-height-margin {
         height: 100%;
     }
 }
 
-@media (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 1000px) and (orientation: landscape) {
     .-full-height-margin,
     .detail .full-height-wrapper {
         padding: 16.5vh 0;
     }
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
     .-full-height-margin,
     .detail .full-height-wrapper {
         padding: 13.5vh 0;
     }
 }
 
-@media (orientation: landscape) {
+@media only screen and (orientation: landscape) {
     .-full-height-margin,
     .detail .full-height-wrapper {
         height: auto;
@@ -1605,7 +1595,7 @@ html.ios .detail .full-height-wrapper {
     }
 }
 
-@media (min-width: 300px) and (max-width: 411px) {
+@media only screen and (min-width: 300px) and (max-width: 411px) {
     .t1 .a-line {
         /* margin-left: -4%; */
         font-size: 0.8em;
@@ -1618,19 +1608,19 @@ html.ios .detail .full-height-wrapper {
         } */
 }
 
-@media (min-width: 371px) and (max-width: 411px) {
+@media only screen and (min-width: 371px) and (max-width: 411px) {
     .imgp .hover-title {
-        margin-top: 5rem;
+        margin-top: 25rem;
     }
 }
 
-@media (min-width: 411px) and (max-width: 500px) {
+@media only screen and (min-width: 411px) and (max-width: 500px) {
     .t1 .a-line {
         margin-left: 0;
         font-size: 0.8em;
     }
     .imgp .hover-title {
-        margin-top: 5rem;
+        margin-top: 27rem;
     }
     .-full-height-margin:last-child {
         padding: 0 0 20vh;
@@ -1640,7 +1630,7 @@ html.ios .detail .full-height-wrapper {
         } */
 }
 
-@media (min-width: 500px) and (max-width: 760px) {
+@media only screen and (min-width: 500px) and (max-width: 760px) {
     .-full-height-margin:last-child {
         padding: 0 0 20vh;
     }
@@ -1650,7 +1640,7 @@ html.ios .detail .full-height-wrapper {
     }
 }
 
-@media (min-width: 200px) and (orientation: landscape) {
+@media only screen and (min-width: 200px) and (orientation: landscape) {
     .-top {
         top: 7vh;
     }
@@ -1665,7 +1655,7 @@ html.ios .detail .full-height-wrapper {
     }
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
     .-border {
         border-width: 11px;
     }
@@ -1863,7 +1853,7 @@ html.ios .detail .full-height-wrapper {
     }
 }
 
-@media (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 1000px) and (orientation: landscape) {
     .-lrg {
         font-size: 6vw;
     }
@@ -1882,7 +1872,7 @@ html.ios .detail .full-height-wrapper {
     }
 }
 
-@media (min-width: 1000px) and (orientation: portrait) {
+@media only screen and (min-width: 1000px) and (orientation: portrait) {
     .-bottom-left {
         bottom: 6vh;
         left: 6vh;
@@ -1919,7 +1909,7 @@ html.ios .detail .full-height-wrapper {
     }
 }
 
-@media (min-width: 1280px) {
+@media only screen and (min-width: 1280px) {
     .about-wrapper {
         max-width: 740px;
     }
@@ -1929,7 +1919,7 @@ html.ios .detail .full-height-wrapper {
     }
 }
 
-@media (min-width: 1281px) {
+@media only screen and (min-width: 1281px) {
     .-top-left {
         left: 9.5%;
     }
@@ -1985,7 +1975,7 @@ html.ios .detail .full-height-wrapper {
     }
 }
 
-@media (min-width: 1366px) {
+@media only screen and (min-width: 1366px) {
     .-bottom {
         bottom: 8.5vh;
     }
@@ -2032,7 +2022,7 @@ html.ios .detail .full-height-wrapper {
     }
 }
 
-@media (min-width: 1400px) {
+@media only screen and (min-width: 1400px) {
     .fixed-left {
         left: 7vh;
     }
@@ -2041,7 +2031,7 @@ html.ios .detail .full-height-wrapper {
     }
 }
 
-@media (min-width: 1600px) {
+@media only screen and (min-width: 1600px) {
     .about-wrapper {
         max-width: 851px;
     }
@@ -2058,7 +2048,7 @@ html.ios .detail .full-height-wrapper {
     }
 }
 
-@media (min-width: 1920px) {
+@media only screen and (min-width: 1920px) {
     .-border {
         border-width: 24px;
     }
