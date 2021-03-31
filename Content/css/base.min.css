@@ -692,10 +692,10 @@ main {
         margin-top: -1em;
     }
     .imgp .hover-title {
-        margin-top: 15em;
+        margin-top: 13em;
     }
     .imgl .hover-title {
-        margin-top: 8em;
+        margin-top: 10em;
     }
     .hover-container p {
         margin-top: 5em;
@@ -749,10 +749,10 @@ main {
         margin-top: -1em;
     }
     .imgp .hover-title {
-        margin-top: 20em;
+        margin-top: 17em;
     }
     .imgl .hover-title {
-        margin-top: 9em;
+        margin-top: 12em;
     }
     .hover-container p {
         margin-top: 7em;
@@ -774,10 +774,10 @@ main {
         margin-top: -1em;
     }
     .imgp .hover-title {
-        margin-top: 20em;
+        margin-top: 17em;
     }
     .imgl .hover-title {
-        margin-top: 5em;
+        margin-top: 12em;
     }
     .hover-container p {
         margin-top: 5em;
@@ -871,10 +871,10 @@ main {
 
 @media screen and (min-width: 540px) and (max-width: 540px) {
     .imgp .hover-title {
-        margin-top: 10rem;
+        margin-top: 17rem;
     }
     .imgl .hover-title {
-        margin-top: 5rem;
+        margin-top: 10rem;
     }
     .caption {
         margin-top: 5em !important;
@@ -923,7 +923,7 @@ main {
 
 @media screen and (max-width: 690px) and (orientation: portrait) {
     .imgp .hover-title {
-        margin-top: 5rem;
+        margin-top: 19rem;
     }
     /* .imgl .hover-title {
         margin-top: 16rem;
