@@ -1,40 +1,11 @@
-/* HEADER */
-
-.js .loading::before {
-    content: "";
-    position: fixed;
-    z-index: 100000;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #fff;
-}
-
-.js .loading::after {
-    content: "";
-    position: fixed;
-    z-index: 100000;
-    top: 50%;
-    left: 50%;
-    width: 60px;
-    height: 60px;
-    margin: -30px 0 0 -30px;
-    pointer-events: none;
-    border-radius: 50%;
-    opacity: 0.4;
-    background: #424242;
-    animation: loaderAnim 0.7s linear infinite alternate forwards;
-}
-
-
 /* PRELOADER CSS */
 
 .page-loader {
+    top: 0;
     width: 100%;
     height: 100vh;
     position: fixed;
-    overflow: hidden;
+    overflow-y: hidden;
     background: #fff;
     z-index: 100000;
     display: grid;
@@ -201,6 +172,9 @@ svg.tea #steamR {
         opacity: 0;
     }
 }
+
+
+/* HEADER */
 
 
 /* SPINNER ANIMATION */
@@ -441,7 +415,6 @@ html {
 }
 
 .nav>li>a {
-    font-size: 12px;
     line-height: 1.4em;
 }
 
@@ -476,7 +449,6 @@ a:hover {
     display: block;
     color: #333;
     text-decoration: none;
-    font-size: 11px;
     line-height: 1.6em;
 }
 
@@ -552,6 +524,7 @@ a:hover {
 
 .copyright {
     font-size: 9px !important;
+    color: #555;
 }
 
 .grid-item {
@@ -582,24 +555,9 @@ body .show-container {
 body>main>div>.asset.image {
     width: auto;
 }
-@media (min-width: 1400px) and (orientation: landscape) {
-    .spacing {
-        margin-top: 1em;
-        margin-left: -2em;
-    }
-    #main-collapse>div.top {
-        height: 10vh !important;
-    }
-    body>main>div>.asset {
-        height: 100%;
-    }
-    .gallery-element {
-        height: 700px !important;
-    }
-    body>main>.assets-grid {
-    padding-top: 10em!important;
-}
-@media (min-width: 1024px) and (max-width: 1400px) and (orientation: landscape) {
+
+
+/* @media (min-width: 1430px) and (max-width: 1430px) and(orientation: landscape) {
     .spacing {
         margin-top: 1em;
         margin-left: -2em;
@@ -614,10 +572,65 @@ body>main>div>.asset.image {
         height: 550px !important;
     }
     body>main>.assets-grid {
-    padding-top: 8em!important;
-}
+        padding-top: 18em !important;
+    }
+} */
+
+@media (min-width: 1281px) {
+    .nav>li>a {
+        font-size: 13px !important;
+    }
 }
 
+@media (max-width: 1280px) {
+    .nav>li>a {
+        font-size: 11px !important;
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1429px) and (orientation: landscape) {
+    .spacing {
+        margin-top: 1em;
+        margin-left: -2em;
+    }
+    #main-collapse>div.top {
+        height: 10vh !important;
+    }
+    body>main>div>.asset {
+        height: 100%;
+    }
+    .gallery-element {
+        height: 550px !important;
+    }
+    body>main>.assets-grid {
+        padding-top: 8em !important;
+    }
+    .nav>li>a {
+        font-size: 13px !important;
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1400px) and (orientation: landscape) {
+    .spacing {
+        margin-top: 1em;
+        margin-left: -2em;
+    }
+    #main-collapse>div.top {
+        height: 10vh !important;
+    }
+    body>main>div>.asset {
+        height: 100%;
+    }
+    .gallery-element {
+        height: 550px !important;
+    }
+    body>main>.assets-grid {
+        padding-top: 8em !important;
+    }
+    .nav>li>a {
+        font-size: 13px !important;
+    }
+}
 
 @media (max-width: 1024px) and (orientation: landscape) {
     .spacing {
@@ -632,6 +645,31 @@ body>main>div>.asset.image {
     }
     .gallery-element {
         height: 500px !important;
+    }
+    .nav>li>a {
+        font-size: 11px !important;
+    }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+    .spacing {
+        margin-top: 1em;
+        margin-left: -2em;
+    }
+    #main-collapse>div.top {
+        height: 10vh !important;
+    }
+    body>main>div>.asset {
+        height: 100%;
+    }
+    .gallery-element {
+        height: 500px !important;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1023px) and (orientation: portrait) {
+    #main-collapse>div.top {
+        height: 10vh !important;
     }
 }
 
