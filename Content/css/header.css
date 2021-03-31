@@ -35,7 +35,7 @@
     height: 100vh;
     position: absolute;
     background: #fff;
-    z-index: 1000;
+    z-index: 100000;
     display: grid;
     place-items: center;
 }
@@ -688,7 +688,7 @@ body>main .gallery-element {
         height: 280px !important;
     }
     body>main>.assets-grid {
-        padding-top: 5em;
+        padding-top: 9em;
     }
 }
 
@@ -697,7 +697,7 @@ body>main .gallery-element {
         height: 550px;
     }
     body>main>.assets-grid {
-        padding-top: 5em;
+        padding-top: 0em;
     }
 }
 
