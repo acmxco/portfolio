@@ -1,21 +1,31 @@
+@font-face {
+    font-family: "Recoleta-RegularDEMO";
+    src: url("../fonts/Recoleta-RegularDEMO.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Maragsa Display";
+    src: url("../fonts/Maragsa-Display.otf") format("opentype");
+}
+
 html,
 body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100vh;
-    font-family: "Monument Extended", sans-serif;
+    font-family: "Recoleta-RegularDEMO", sans-serif !important;
     overflow: hidden;
 }
 
 
 /* nav  */
 
-nav {
+.navi {
     width: 80%;
     height: 100px;
     margin: 0 auto;
-    display: flex;
+    display: flex !important;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -73,6 +83,10 @@ img {
     z-index: 2;
 }
 
+.imagebox {
+    display: inline;
+}
+
 
 /* header  */
 
@@ -118,8 +132,8 @@ img {
     top: 50%;
     left: 15%;
     transform: translate(-50%, -50%);
-    text-transform: uppercase;
-    text-decoration: underline;
+    text-transform: none !important;
+    text-decoration: none;
 }
 
 .projects-right {
@@ -127,8 +141,12 @@ img {
     top: 50%;
     right: 10%;
     transform: translate(-50%, -50%);
-    text-transform: uppercase;
-    text-decoration: underline;
+    text-transform: none !important;
+    text-decoration: none;
+}
+
+.bottom {
+    bottom: 0;
 }
 
 .img-nav {
@@ -168,10 +186,56 @@ img {
     z-index: 2;
 }
 
+.navbar {
+    width: 100%;
+}
+
+.navbar-nav {
+    z-index: 100 !important;
+    position: relative !important;
+    padding: 0em 1em 0em !important;
+}
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+    border-color: #fff !important;
+    z-index: 100 !important;
+    position: relative !important;
+    background: #fff !important;
+}
+
+.navbar-toggle {
+    border: none !important;
+}
+
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+    background-color: #fff !important;
+}
+
+.navbar-default {
+    background-color: #fff !important;
+    border-color: #fff !important;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
+    background-color: none !important;
+}
+
+.container-fluid>.navbar-collapse,
+.container-fluid>.navbar-header,
+.container>.navbar-collapse,
+.container>.navbar-header {
+    padding: 1em 1em 0em !important;
+    overflow: hidden;
+}
+
 
 /* media queries  */
 
-@media (max-width: 900px) {
+@media (max-width: 720px) and (orientation: portrait) {
     .wrapper-img {
         width: 90%;
     }
@@ -184,7 +248,24 @@ img {
         font-size: 40px;
     }
     .projects,
-    .img-nav {
+    .projects-right,
+    .menu {
+        display: none !important;
+    }
+}
+
+@media (max-width: 900px) and (orientation: landscape) {
+    .navbar,
+    .menu .navi {
+        display: none;
+    }
+    .projects-right {
+        right: 0%;
+    }
+}
+
+@media (min-width: 900px) {
+    .navbar {
         display: none;
     }
 }
