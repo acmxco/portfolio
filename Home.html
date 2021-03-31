@@ -220,7 +220,7 @@
         $(window).on('load', function() {
             setTimeout(function() { // allowing 3 secs to fade out loader
                 $('.page-loader').fadeOut('slow');
-            }, 3500);
+            }, 1500);
         });
         document.addEventListener("DOMContentLoaded", function(event) {
             navbarToggleSidebar();
@@ -231,7 +231,7 @@
         Array.prototype.forEach.call(imgs, function(img) {
             setTimeout(function() {
                 img.classList.add("visible")
-            }, 700 * i)
+            }, 1000 * i)
             i++;
         })
         $('img[src="/images/lazy.jpg"]').each(function(index, el) {

@@ -33,7 +33,8 @@
 .page-loader {
     width: 100%;
     height: 100vh;
-    position: absolute;
+    position: fixed;
+    overflow: hidden;
     background: #fff;
     z-index: 100000;
     display: grid;
