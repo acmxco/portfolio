@@ -1883,7 +1883,7 @@ html.ios .detail .full-height-wrapper {
 
 @media only screen and (min-width: 1000px) and (orientation: landscape) {
     .-lrg {
-        font-size: 4vw;
+        font-size: 6vw;
     }
     .about-wrapper {
         width: 54%;
