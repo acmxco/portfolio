@@ -1,4 +1,4 @@
-@media (min-width: 1240px) {
+    @media (min-width: 1240px) {
     .masonry {
         margin-top: 25vh !important;
         margin-left: -3em;
@@ -1812,8 +1812,7 @@ body.gallery main {
     }
     body.gallery .asset.video {
         padding-bottom: 10px;
-        width: 500px;
-        display: flex;
+        ?
     }
 }
 
@@ -4025,4 +4024,3 @@ body.order_download svg {
 
 .videotitle {
     text-align: center;
-}
