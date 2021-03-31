@@ -692,10 +692,10 @@ main {
         margin-top: -1em;
     }
     .imgp .hover-title {
-        margin-top: 13em;
+        margin-top: 5rem !important;
     }
     .imgl .hover-title {
-        margin-top: 10em;
+        margin-top: 5rem !important;
     }
     .hover-container p {
         margin-top: 5em;
@@ -749,10 +749,10 @@ main {
         margin-top: -1em;
     }
     .imgp .hover-title {
-        margin-top: 17em;
+        margin-top: 5rem;
     }
     .imgl .hover-title {
-        margin-top: 12em;
+        margin-top: 5rem;
     }
     .hover-container p {
         margin-top: 7em;
@@ -774,10 +774,10 @@ main {
         margin-top: -1em;
     }
     .imgp .hover-title {
-        margin-top: 17em;
+        margin-top: 20rem;
     }
     .imgl .hover-title {
-        margin-top: 12em;
+        margin-top: 15rem;
     }
     .hover-container p {
         margin-top: 5em;
@@ -835,10 +835,10 @@ main {
         margin-top: 2.5vh;
     }
     .imgp .hover-title {
-        margin-top: 15em;
+        margin-top: 5rem;
     }
     .imgl .hover-title {
-        margin-top: 9em;
+        margin-top: 5em;
     }
 }
 
@@ -871,10 +871,10 @@ main {
 
 @media screen and (min-width: 540px) and (max-width: 540px) {
     .imgp .hover-title {
-        margin-top: 17rem;
+        margin-top: 5rem !important;
     }
     .imgl .hover-title {
-        margin-top: 10rem;
+        margin-top: 5rem;
     }
     .caption {
         margin-top: 5em !important;
@@ -923,7 +923,7 @@ main {
 
 @media screen and (max-width: 690px) and (orientation: portrait) {
     .imgp .hover-title {
-        margin-top: 19rem;
+        margin-top: 5rem;
     }
     /* .imgl .hover-title {
         margin-top: 16rem;
@@ -1620,7 +1620,7 @@ html.ios .detail .full-height-wrapper {
 
 @media (min-width: 371px) and (max-width: 411px) {
     .imgp .hover-title {
-        margin-top: 15rem;
+        margin-top: 5rem;
     }
 }
 
@@ -1630,7 +1630,7 @@ html.ios .detail .full-height-wrapper {
         font-size: 0.8em;
     }
     .imgp .hover-title {
-        margin-top: 15rem;
+        margin-top: 5rem;
     }
     .-full-height-margin:last-child {
         padding: 0 0 20vh;
