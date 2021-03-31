@@ -25,12 +25,13 @@ body {
 }
 
 .nav-container {
-    position: fixed;
+    position: fixed!important;
     left: -100%;
     width: 100%;
     height: 100vh;
     background: #000;
     top: 0;
+    overflow:hidden;
 }
 
 .menu__item {

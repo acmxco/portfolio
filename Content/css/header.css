@@ -582,6 +582,24 @@ body .show-container {
 body>main>div>.asset.image {
     width: auto;
 }
+@media (min-width: 1024px) and (orientation: landscape) {
+    .spacing {
+        margin-top: 1em;
+        margin-left: -2em;
+    }
+    #main-collapse>div.top {
+        height: 10vh !important;
+    }
+    body>main>div>.asset {
+        height: 100%;
+    }
+    .gallery-element {
+        height: 550px !important;
+    }
+    body>main>.assets-grid {
+    padding-top: 8em!important;
+}
+}
 
 @media (max-width: 1024px) and (orientation: landscape) {
     .spacing {
@@ -689,7 +707,7 @@ body>main .gallery-element {
         height: 280px !important;
     }
     body>main>.assets-grid {
-        padding-top: 6em !important;
+        padding-top: 8em !important;
     }
 }
 
@@ -698,7 +716,7 @@ body>main .gallery-element {
         height: 550px;
     }
     body>main>.assets-grid {
-        padding-top: 2em !important;
+        padding-top: 8em !important;
     }
 }
 
