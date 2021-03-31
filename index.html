@@ -89,6 +89,11 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script>
+        setTimeout(fade_out, 5000);
+
+        function fade_out() {
+            $(".wrapper").fadeOut().empty();
+        }
         var textWrapper = document.querySelector(".header-1");
         textWrapper.innerHTML = textWrapper.textContent.replace(
             /\S/g,
