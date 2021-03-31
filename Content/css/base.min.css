@@ -486,14 +486,15 @@ main {
     pointer-events: none;
 }
 
-.js .content__item--current .content-top {
+
+/* .js .content__item--current .content-top {
     height: 15%;
     background-color: #fff;
     position: fixed;
     width: 100%;
     z-index: -1;
     top: 0;
-}
+} */
 
 .js .content__item--current {
     height: auto;
