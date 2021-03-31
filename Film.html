@@ -732,7 +732,17 @@
             </div>
         </div>
     </section>
-
+    <script>
+        $(window).on('load', function() {
+            setTimeout(function() { // allowing 3 secs to fade out loader
+                $('.page-loader').fadeOut('slow');
+            }, 1500);
+        });
+        document.addEventListener("DOMContentLoaded", function(event) {
+            navbarToggleSidebar();
+            navActivePage();
+        });
+    </script>
     <script>
         document.createElement("picture")
     </script>
