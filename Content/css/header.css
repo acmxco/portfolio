@@ -327,6 +327,9 @@ html {
     .mlogo {
         margin-top: -1.5em;
     }
+    .sidebar .navbar-collapse {
+        padding-left: 0 !important;
+    }
 }
 
 @media (max-width: 720px) and (orientation: landscape) {
@@ -429,6 +432,7 @@ p {
 .mlogo {
     /* padding-top:2em; */
     width: 30%;
+    z-index: 20;
 }
 
 a:hover {
