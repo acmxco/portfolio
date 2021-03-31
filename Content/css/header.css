@@ -693,12 +693,12 @@ body>main .gallery-element {
     }
 }
 
-@media (min-width: 850px) and (max-width: 1000px) and (orientation: landscape) {
+@media (min-width: 850px) and (max-width: 1280px) and (orientation: landscape) {
     body>main .gallery-element {
         height: 550px;
     }
     body>main>.assets-grid {
-        padding-top: 0em;
+        padding-top: 2em !important;
     }
 }
 
