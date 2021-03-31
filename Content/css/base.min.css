@@ -739,7 +739,7 @@ main {
         margin-top: -1em;
     }
     .imgp .hover-title {
-        margin-top: 15rem;
+        margin-top: 10rem;
     }
     .imgl .hover-title {
         margin-top: 10em;
@@ -764,7 +764,7 @@ main {
         margin-top: -1em;
     }
     .imgp .hover-title {
-        margin-top: 15em;
+        margin-top: 10em;
     }
     .imgl .hover-title {
         margin-top: 10em;
@@ -839,7 +839,7 @@ main {
         margin-top: 2.5vh;
     }
     .imgp .hover-title {
-        margin-top: 20em;
+        margin-top: 15em;
     }
     .imgl .hover-title {
         margin-top: 15em;
@@ -875,7 +875,7 @@ main {
 
 @media screen and (min-width: 540px) and (max-width: 540px) {
     .imgp .hover-title {
-        margin-top: 15em !important;
+        margin-top: 10em !important;
     }
     .imgl .hover-title {
         margin-top: 10em;
