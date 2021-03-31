@@ -707,7 +707,7 @@ body>main .gallery-element {
         height: 280px !important;
     }
     body>main>.assets-grid {
-        padding-top: 8em !important;
+        padding-top: 6em !important;
     }
 }
 
@@ -716,7 +716,7 @@ body>main .gallery-element {
         height: 550px;
     }
     body>main>.assets-grid {
-        padding-top: 8em !important;
+        padding-top: 6em !important;
     }
 }
 
