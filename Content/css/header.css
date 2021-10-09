@@ -1147,7 +1147,7 @@ body.hidden-scroll {
 @media (min-width: 1280px) {
     .grid-item,
     .grid-sizer {
-        width: 43% !important;
+        width: 40% !important;
         padding: 6em !important;
         margin-left: 30px;
     }
